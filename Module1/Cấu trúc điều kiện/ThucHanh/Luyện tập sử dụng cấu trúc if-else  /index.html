@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IF-Else</title>
+</head>
+<body>
+ <script>
+     let userName = prompt("Nhap ten nguoi dung: ");
+     if (userName =="Admin"){
+         let passWord = prompt("Nhap mat khau");
+         if (passWord== "12345"){
+            alert("Welcome")
+         } else if (passWord== null){
+             alert("Canceled");
+         } else {
+             alert("Wrong password");
+             // passWord = prompt("Nhap lai mat khau");
+         }
+     } else if (userName == null){
+         console.log(userName)
+         alert("Canceled");
+     } else {
+         alert("I don't know");
+     }
+ </script>
+
+</body>
+</html>
