@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>AccountName</title>
+</head>
+<body>
+    <h1>Quản Lý Khu Nghỉ Dưỡng FURAMA </h1>
+    <h2>Customer Infomation: </h2>
+    <label>Full Name: </label>
+    <input id="name" type="text"><br>
+    <label>Id Card:</label>
+    <input id="idCard" type="number"><br>
+    <label>Birthday: </label>
+    <input id="birthday" type="date"><br>
+    <label>Email: </label>
+    <input id="email" type="email"><br>
+    <label>Address: </label>
+    <input id="address" type="text"><br>
+    <label>Customer Type: </label>
+    <select id="customerType" >
+        <option value="diamond">Diamond</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="member">Member</option>
+    </select><br>
+    <label>Discount: </label>
+    <input id="discount" type="number"><br>
+    <label>Followed Pepple Number: </label>
+    <input id="followedpeople" type="number"><br>
+    <label>Rent Days: </label>
+    <input id = "rentDays" type="number"><br>
+    <label>Service Type: </label>
+    <select id="serviceType" >
+        <option value="villa">Villa</option>
+        <option value="house">House</option>
+        <option value="room">Room</option>
+    </select><br>
+    <label>Room Type: </label>
+    <select id="roomType" >
+        <option value="vip">VIP</option>
+        <option value="business">Business</option>
+        <option value="normal">Normal</option>
+    </select><br>
+    <button type="button" onclick="showInfo()">Save </button>
+    <h3> Bảng Giá</h3>
+    <p>Villa: 500$/Day</p>
+    <p>House: 300$/Day</p>
+    <p>Room: 100$/Day</p>
+    <h3> Customer</h3>
+   <p id="fullName"></p>
+    <p id="birth"></p>
+    <p id="cmnd"></p>
+    <p id="mail"></p>
+    <p id="add"></p>
+    <p id="cusType"></p>
+    <p id="dics"></p>
+    <p id="followpp"></p>
+    <p id="renDays"></p>
+    <p id="serype"></p>
+    <p id="romType"></p>
+    <h3> Total price</h3>
+    <p id="result" ></p>
+    <script src="AccountName.js">
+
+</script>
+</body>
+</html>

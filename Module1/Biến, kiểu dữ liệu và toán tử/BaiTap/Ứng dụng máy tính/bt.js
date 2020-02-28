@@ -5,8 +5,8 @@ let result=0;
 
 
 function add() {
-    result=parseInt(number1.value) + parseInt(number2.value)
-    resultInput.value=result;
+    // result=parseInt(number1.value) + parseInt(number2.value)
+    resultInput.value=parseInt(number1.value) + parseInt(number2.value);
 }
 function sub() {
     result=parseInt(number1.value) - parseInt(number2.value)
