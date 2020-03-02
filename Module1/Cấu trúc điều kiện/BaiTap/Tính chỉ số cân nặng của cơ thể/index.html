@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<label> Nhap so can nang</label>
+<input id="weigh"> <br>
+<label> Nhap so chieu cao</label>
+<input id="height"> <br>
+<button type="button" onclick="tinhbmi()">Click me</button>
+<p id="bmi">
+<p id="result">
+
+    <script>
+        let weigh = document.getElementById("weigh");
+        let height = document.getElementById("height");
+        let result = 0;
+        function tinhbmi() {
+            let bmi = weigh.value / (height.value * height.value);
+            if (bmi < 18.5) {
+                result = "Underweight";
+            } else if (bmi < 25) {
+                result = "Normal";
+            } else if (bmi < 30) {
+                result = "Overweight"
+            } else {
+                result = "Obese";
+            }
+            document.getElementById("bmi").innerHTML = "Chi so BMI:" + " " + bmi;
+            document.getElementById("result").innerHTML = "Phan Loai:" + " " + result;
+        }
+    </script>
+</body>
+</html>
