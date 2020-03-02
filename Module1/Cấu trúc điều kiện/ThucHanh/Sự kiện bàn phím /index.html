@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su kien ban phim</title>
+</head>
+<body onload="doReady()">
+<img id="nobita" src="images/1.png" style="position: absolute; left: 0; top: 0;" height = "100" width="80">
+
+<script>
+    function upPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top= parseInt( element.style.top) - 5 +'px' ;
+    };
+    function downPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top= parseInt( element.style.top) + 5 + 'px';
+    };
+    function leftPressed() {
+        let element = document.getElementById("nobita");
+        element.style.left= parseInt( element.style.left) - 5 + 'px';
+    };
+    function rightPressed() {
+        let element = document.getElementById("nobita");
+        element.style.left= parseInt( element.style.left) + 5 + 'px';
+    };
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 38:
+            case 87:
+                upPressed();
+                break;
+            case 40:
+            case 83:
+                downPressed();
+                break;
+            case 37:
+            case 65:
+                leftPressed();
+                break;
+            case 39:
+            case 68:
+                rightPressed();
+                break;
+        }
+    }
+    function doReady() {
+        window.addEventListener("keydown", moveSelection)
+    }
+</script>
+</body>
+</html>
