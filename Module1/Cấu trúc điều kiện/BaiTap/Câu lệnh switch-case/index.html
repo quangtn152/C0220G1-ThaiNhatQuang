@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh switch-case</title>
+</head>
+<body>
+<input id="months">
+<button type="button" onclick="ngaythang()"> Click me</button>
+<p id="songay"></p>
+<script>
+    let months = document.getElementById("months");
+    console.log("hello")
+
+    function ngaythang() {
+        let songay = 0;
+        console.log("click")
+        switch (parseInt(months.value)) {
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                songay = "Thang " + months.value + " co 30 ngay";
+                break;
+            case 2:
+                songay = " Thang " + months.value + " co 28 hoac 29 ngay";
+                break;
+            default:
+                // console.log("default")
+                songay = "Thang " + months.value + " co 31 ngay";
+                break;
+        }
+        document.getElementById("songay").innerHTML = songay;
+    }
+</script>
+</body>
+</html>
