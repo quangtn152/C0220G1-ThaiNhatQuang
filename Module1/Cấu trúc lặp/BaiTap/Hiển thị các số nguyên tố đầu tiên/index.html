@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let numb = 2;
+    let result = "";
+    while (count < 20) {
+        let status = true;
+        for (let i = 2; i < Math.sqrt(numb); i++) {
+            if (numb % 2 == 0) {
+                status= false;
+                break;
+            }
+        }
+        if (status){
+            count ++;
+            result = result + numb + ",";
+        }
+        numb++;
+    }
+    document.write(result)
+</script>
+</body>
+</html>
