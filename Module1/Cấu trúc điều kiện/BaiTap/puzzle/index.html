@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle</title>
+</head>
+<body>
+<div> <img src="images/monkey_part1x1.jpg">
+    <img id="img1" src="images/funny-cat1_part1x1.jpg" onclick="switchImages()">
+    <img id="img2" src="images/funny-cat1_part2x1.jpg" onclick="switchImages(this.src)">
+    <img id="img3" src="images/funny-cat1_part3x1.jpg" onclick="switchImages(this.src)">
+    <img id="img4" src="images/funny-cat1_part4x1.jpg" onclick="switchImages(this.src)">
+    <img id="img5"src="images/funny-cat1_part5x1.jpg" onclick="switchImages(this.src)">
+
+
+</div>
+<script>
+    function switchImages() {
+        let img1= document.getElementById("img1")
+        if (img1.src){
+            img1.src = "images/monkey_part1x1.jpg"
+            console.log("a")
+        }
+    }
+
+</script>
+</body>
+</html>
