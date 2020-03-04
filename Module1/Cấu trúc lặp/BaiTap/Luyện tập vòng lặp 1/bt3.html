@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonanci</title>
+</head>
+<body>
+<!--Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+<!--F(n) = F(n-1) + F(n-2)-->
+
+<script>
+    let count = 0;
+    let numb1 = 1;
+    let numb2 = 0;
+    let temp;
+    let result= "";
+    while (count < 20) {
+        temp = numb1;
+        console.log("temp", temp)
+
+        numb1 = numb1 + numb2;
+        console.log("numb1", numb1)
+
+        numb2 = temp
+        console.log("numb2", numb2)
+        console.log("count", count)
+        result= result+ temp + ", "
+        count++;
+    }
+    document.write(result)
+</script>
+</body>
+</html>

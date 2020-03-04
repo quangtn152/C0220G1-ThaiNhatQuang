@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt7</title>
+</head>
+<body>
+<!--Hãy viết một chương trình in ra các số từ 1 đến 100. -->
+<!--Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. -->
+<!--Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".-->
+<script>
+    let count = 1;
+    let result = "";
+    while (count <= 100) {
+        // result = result+ count+ ",";
+        // if (count % 3 == 0) {
+        //     result = result + "fizz" + ","
+        // } else if (count % 5 == 0) {
+        //     result = result + "buzz" + ","
+        // } else if ((count % 3 == 0) && (count % 5 == 0)) {
+        //     result = result + "fizzbuzz" + ","
+        // } else {
+        //     result = result + count + ","
+        // }
+        if (count % 3 == 0 && count % 5 == 0) {
+            result = result + "fizzbuzz" + ",";
+        } else if (count % 3 == 0) {
+            result = result + "fizz" + ",";
+        } else if (count % 5 == 0) {
+            result = result + "buzz" + ",";
+        } else {
+            result = result + count + ","
+        }
+        count++
+    }
+    document.write(result);
+</script>
+</body>
+</html>

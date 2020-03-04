@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt4</title>
+</head>
+<body>
+<!--Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.-->
+<script>
+    let count = 0;
+    let numb1 = 1;
+    let numb2 = 0;
+    let temp;
+    let result = "";
+    while (count>-1) {
+        temp = numb1;
+        console.log("temp", temp)
+
+        numb1 = numb1 + numb2;
+        console.log("numb1", numb1)
+
+        numb2 = temp
+        console.log("numb2", numb2)
+        console.log("count", count)
+        if (temp % 5 == 0) {
+            result = result + temp;
+            break;
+        }
+        count++;
+    }
+    document.write(" So dau tien chia het cho 5: "+result)
+</script>
+</body>
+</html>

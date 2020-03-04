@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+1. Thiết kế giao diện: Giao diện chỉ gồm 1 Button "Chơi": cho phép người dùng bắt đầu chơi hoặc chơi lại
+
+2. Mô tả ứng dụng: Khi người dùng nhấn vào button “Chơi”:
+
+Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào
+Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn
+Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán
+Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên.
+Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi
+Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại.
+<h1> Đoán số</h1>
+
+<button onclick="playMe()">Chơi</button>
+<script>
+    function playMe() {
+        let numb1 = parseInt(prompt("Bat dau tu so: "));
+        let numb2 = parseInt(prompt("Ket thuc den so: "));
+        // Math.random() * (max - min) + min;
+        let numb = Math.floor(Math.random() * (numb2 - numb1) + numb1);
+        console.log(numb)
+        let value = parseInt(prompt("Nhap so: "));
+        while (numb != value) {
+            if (numb > value) {
+                alert(" So ban nhap nho hon so can tim");
+                value = parseInt(prompt("Nhap lai so: "));
+            } else if (numb < value) {
+                alert(" So ban nhap lon hon so can tim");
+                value = parseInt(prompt("Nhap lai so: "));
+            }
+        }
+        alert(" Chuc mung ban da doan trung");
+        console.log(" Chuc mung ban da doan trung")
+    }
+</script>
+</body>
+</html>
