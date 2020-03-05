@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci</title>
+</head>
+<body>
+<script>
+    <!--F(n) = F(n-1) + F(n-2)-->
+    let fn = 0;
+    let fn1= 1;
+    let fn2= 0;
+    let count=0;
+    let result=""
+    while (count <100){
+        fn= fn1;
+        fn1= fn1+fn2;
+        fn2= fn;
+        result= result+ fn + ", ";
+        count++;
+    }
+    document.write(result)
+</script>
+</body>
+</html>

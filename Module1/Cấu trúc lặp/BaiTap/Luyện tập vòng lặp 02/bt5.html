@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lai Ngan Hang</title>
+</head>
+<body>
+<!--chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.-->
+<script>
+    let sotiengui = parseInt(prompt("nhap so tien ban dau: "))
+    let sothang = parseInt(prompt("nhap so thang can vay: "))
+    let laisuat = parseInt((prompt("lai suat hang thang: ")))
+    let tienlai = sotiengui * (laisuat / 12) * sothang;
+    document.write("so tien ban dau: " + sotiengui+ "<br>")
+    document.write("so thang can vay: " + sothang+ "<br>")
+    document.write("Lai suat hang thang:  " + laisuat + "%" +"<br>")
+    document.write("Lai suat ngan hang: " + tienlai + "<br>")
+</script>
+</body>
+</html>
