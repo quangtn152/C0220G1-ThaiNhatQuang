@@ -10,9 +10,12 @@
     let first = 0;
     let last = arr.length - 1;
     while (first < last) {
-        let temp = arr[first]
-        arr[first] = arr[last]
-        arr[last] = temp;
+        // let temp = arr[first]
+        // arr[first] = arr[last]
+        // arr[last] = temp;
+        arr[first] = arr[first] + arr[last];//8
+        arr[last] = arr[first]- arr[last];//1
+        arr[first]= arr[first] -arr[last]//7
         first++;
         last --;
     }
