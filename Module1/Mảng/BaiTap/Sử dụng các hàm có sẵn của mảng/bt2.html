@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt2</title>
+</head>
+<body>
+<!--Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2 số chẵn.-->
+<!--Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.-->
+<script>
+    let value = prompt("Nhap so vao:")
+    let arr = value.split("");
+    console.log(arr);
+    let newArr=[arr[0]]
+    for (let i = 1; i < arr.length; i++) {
+        if ((arr[i-1] % 2 == 0) && (arr[i]%2==0)) {
+            newArr.push('-',arr[i]);
+        }else {
+            newArr.push(arr[i])
+        }
+    }
+    document.write(newArr+"<br>")
+
+    document.write(newArr.join(""))
+</script>
+</body>
+</html>

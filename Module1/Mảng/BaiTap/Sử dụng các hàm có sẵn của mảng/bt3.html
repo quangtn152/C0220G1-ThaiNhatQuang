@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt3</title>
+</head>
+<body>
+Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa.
+Ví dụ: nếu bạn nhập vào chuỗi 'The Quick Brown Fox' kết quả của chương trình là 'tHE qUICK bROWN fOX'.
+<script>
+    // let str= prompt("nhap chuoi: ")
+    let str = 'The Quick Brown Fox';
+    let strLow = str.toLowerCase();
+    let arrLow = strLow.split('')
+    let strUp = str.toUpperCase();
+    let arrUp = strUp.split('')
+    let arr = str.split('')
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === arrLow[i]) {
+            newArr.push(arrUp[i])
+        } else {
+            newArr.push(arrLow[i])
+        }
+    }
+    document.write(newArr.join(''))
+    console.log(arr);
+</script>
+</body>
+</html>
