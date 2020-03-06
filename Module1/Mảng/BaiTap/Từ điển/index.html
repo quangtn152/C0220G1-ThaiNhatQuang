@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Dien</title>
+</head>
+<body>
+<h1>Tu Dien</h1>
+<label> Dien tu can dich:</label>
+<input id="word">
+<button type="button" onclick="tratu()"> Tra tu</button>
+<h2> Nghia cua tu:</h2>
+<div id="result"></div>
+<script>
+    let tudien = document.getElementById("word");
+    let tienganh = ["hello", "bye", "night"]
+    let tiengviet = ["xin chao", "tam biet", 'buoi toi']
+
+    function tratu() {
+        for (let i = 0; i < 3; i++) {
+            if (tudien.value == tienganh[i]) {
+                document.getElementById("result").innerHTML = tiengviet[i]
+                break;
+            } else if (tudien.value == tiengviet[i]) {
+                document.getElementById("result").innerHTML = tienganh[i]
+                break;
+            } else  {
+                document.getElementById("result").innerHTML = "ko tim thay tu"
+            }
+        }
+    }
+</script>
+</body>
+</html>
