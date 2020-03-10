@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeu Cau 2</title>
+</head>
+<body>
+<script>
+    let name = "Thai Quang";
+    let idCard = "12345";
+    let email = "wang@gmail.com";
+    let address = "Da Nang";
+    let serviceType = "villa";
+    let roomType = "Vip";
+    let followedpeople = 2;
+    let birthday = "15/02";
+    let customerType = "Diamond";
+    let rentDays = 2;
+
+    let showInfo = parseInt(prompt('1. Hien Thi Thong Tin Khach Hang' + "\n" +
+        "2.Chinh sua thong tin khach hang " + "\n" +
+        "3.Hien Thi Gia"));
+
+    switch (showInfo) {
+        case 1: {
+            alert("Name: " + name + "\n" +
+                "idCard: " + idCard + "\n" +
+                "email: " + email + "\n" +
+                "address: " + address + "\n" +
+                "customerType: " + customerType + "\n" +
+                "roomType: " + roomType + "\n" +
+                "Followed people: " + followedpeople + "\n" +
+                "birthday: " + birthday + "\n" +
+                "serviceType: " + serviceType + "\n" +
+                "rentDays: " + rentDays + "\n")
+            break;
+        }
+        case 2: {
+            let selectEdit = parseInt(prompt("1.Name: " + name + "\n" +
+                "2.idCard: " + idCard + "\n" +
+                "3.email: " + email + "\n" +
+                "4.address: " + address + "\n" +
+                "5.customerType: " + customerType + "\n" +
+                "6.roomType: " + roomType + "\n" +
+                "7.Followed people: " + followedpeople + "\n" +
+                "8.birthday: " + birthday + "\n" +
+                "9.serviceType: " + serviceType + "\n" +
+                "10.rentDays: " + rentDays + "\n"
+            ));
+            switch (selectEdit) {
+                case 1 : {
+                    name = prompt("1.Name: ");
+                    break;
+                }
+                case 2 : {
+                    idCard = prompt("2.idCard: ");
+                    break;
+                }
+                case 3 : {
+                    email = prompt("3.email: ");
+                    break;
+                }
+                case 4 : {
+                    address = prompt("4.address: ");
+                    break;
+                }
+                case 5 : {
+                    customerType = prompt("5.customerType: ");
+                    break;
+                }
+                case 6 : {
+                    roomType = prompt("6.roomType: ");
+                    break;
+                }
+                case 7 : {
+                    followedpeople = prompt("7.Followed people: ");
+                    break;
+                }
+                case 8 : {
+                    birthday = prompt("8.birthday: ");
+                    break;
+                }
+                case 9 : {
+                    serviceType = prompt("9.serviceType: ");
+                    break;
+                }
+                case 10 : {
+                    rentDays = prompt("10.Name: ");
+                    break;
+                }
+                default: {
+                    alert("Failed")
+                }
+            }
+            alert("Name: " + name + "\n" +
+                "idCard: " + idCard + "\n" +
+                "email: " + email + "\n" +
+                "address: " + address + "\n" +
+                "customerType: " + customerType + "\n" +
+                "roomType: " + roomType + "\n" +
+                "Followed people: " + followedpeople + "\n" +
+                "birthday: " + birthday + "\n" +
+                "serviceType: " + serviceType + "\n" +
+                "rentDays: " + rentDays + "\n"
+            );
+        }
+        case 3: {
+            let price = 0;
+            if (serviceType === "villa") {
+                price = 500;
+            } else if (serviceType === "house") {
+                price = 300;
+            } else if (serviceType === "room") {
+                price = 100;
+            }
+            let giaSale = 0;
+            if (address === "Da Nang") {
+                giaSale += 20;
+            } else if (address === "Hue") {
+                giaSale += 10;
+            } else if (address === "Quang Nam") {
+                giaSale += 5;
+            }
+            if (rentDays>7){
+                giaSale += 30;
+            } else if (rentDays>5){
+                giaSale += 20;
+            }else if (rentDays>2){
+                giaSale += 10;
+            }
+            if (customerType ==="Diamond"){
+                giaSale += 15;
+            }else if (customerType ==="Platium"){
+                giaSale += 10;
+            } else if (customerType ==="Gold"){
+                giaSale += 5;
+            }else if (customerType ==="Silver"){
+                giaSale += 2;
+            }else if (customerType ==="Member"){
+                giaSale += 0;
+            }
+            alert("Total price: " + (price * rentDays - giaSale));
+            break;
+        }
+        default: {
+            alert("Bạn hãy chọn các chức năng có trong trình đơn");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic tac toe</title>
+</head>
+<body>
+Xây dựng game caro đơn giản sử dụng phần thực hành về tạo bàn cờ caro.
+Bàn cờ thay vì số 0 hiển thị mặc định bằng dấu (.).
+
+Có 2 người chơi lần lượt nhập vào là X và O.
+Mỗi lần giá trị được nhập vào thì bàn cờ thay đổi giá trị theo người chơi.
+
+Xác định người chiến thằng nhập giá trị có 3 ô liên tiếp giống nhau.
+<div id="caro"></div>
+<button onclick="turnA()">Turn A</button>
+<button onclick="turnB()">Turn A</button>
+
+<h1>caro</h1>
+<script>
+    let data = "";
+    let banCaro = [];
+    for (let i = 0; i < 10; i++) {
+        banCaro[i] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    }
+    for (let i = 0; i < 10; i++) {
+        data = data + "<br>";
+        for (let j = 0; j < 10; j++) {
+            data = data + banCaro[i][j] +"&nbsp;&nbsp;&nbsp;"
+        }
+    }
+    document.getElementById("caro").innerHTML = data
+    function turnA() {
+         let x= prompt("nhap x:")
+         let y= prompt("nhap y:")
+
+    }
+
+
+
+
+</script>
+</body>
+</html>
