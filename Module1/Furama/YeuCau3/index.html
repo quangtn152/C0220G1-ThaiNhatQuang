@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeu Cau 3</title>
+</head>
+<body>
+<script>
+    let name;
+    let birthday;
+    let idCard;
+    let email;
+    let address;
+    let serviceType;
+    let roomType;
+    let customerType;
+    let followedpeople;
+    let rentDays;
+    let totalPrice;
+    let check = false;
+
+
+    let tempName = "";
+    name = prompt("Customer Name: ");
+    name = name.trim().toLowerCase();
+    for (let i = 0; i < name.length; i++) {
+        if (name.charAt(i) === " " && name.charAt(i + 1) === " ") {
+            console.log("a")
+        }
+        if (i === 0 || name.charAt(i - 1) === " ") {
+            tempName += name.charAt(i).toUpperCase();
+            continue;
+        }
+        tempName += name.charAt(i);
+    }
+    // alert(tempName)
+    do { // dd/mm/yyyy
+        birthday = prompt("Customer birthday: ");
+        if ((birthday.charAt(2) === "/") && (birthday.charAt(5) === "/")) {
+            let day = birthday.substring(0, 2);
+            let month = birthday.substring(3, 5);
+            let year = birthday.substring(6, 10);
+            if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+                day = Number.parseFloat(day);
+                month = Number.parseFloat(month);
+                year = Number.parseFloat(year);
+                if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)) {
+                    if (day < 32 && month < 13 && year > 1950) {
+                        check = true
+                    }
+                }
+            }
+        }
+        if (!check) {
+            alert("Ngay sinh khong dung dinh dang")
+        }
+    } while (!check)
+
+    do {
+        check = false;
+        idCard = parseInt(prompt("Customer idCard: "));
+        let idLength = idCard.toString()
+        if ((idLength.length != 8) || (!Number.isInteger(idCard)) || (idCard < 0)) {
+            // console.log("0" ,idCard)
+            // console.log("1" ,idCard.toString().length)
+            // console.log("2",typeof idCard)
+            // console.log("3",Number.isInteger(idCard))
+            alert("ID CARD khong dung");
+        } else {
+            check = true
+        }
+    } while (!check)
+    // do {
+    //     let countChar = 0;
+    //     let countDoc = 0;
+    //     email = prompt("Customer email: ");
+    //     for (let i = 0; i < email.length; i++) {
+    //         if (email.charAt(i) === "@") {
+    //             countChar++;
+    //             for (let j = i + 1; j < email.length; j++) {
+    //                 if (email.charAt(j) === ".") {
+    //                     countDoc++;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     if (countChar != 1 || countDoc < 1) {
+    //         alert("Email ban nhap khong dung")
+    //     } else {
+    //         check = true;
+    //     }
+    // } while (!check);
+    do {
+        check = false;
+        email = prompt("Customer email: ")
+        let at = email.indexOf('@');
+        let dot = email.lastIndexOf('.')
+        let space = email.indexOf(" ")
+        if ((at != -1) && // co ky tu @
+            (at != 0) && // ky tu @ khong nam o dau
+            (dot != -1) && //co ky tu cham .
+            (dot > at + 1) && // ky tu cham nam o sau @ va phai co ky tu nam giua @ va .
+            (dot < email.length - 1) && // . khong nam vi tri cuoi cung
+            (space == -1)) { //khong chua khoang trang
+            check = true;
+        } else {
+            alert("Email ban nhap khong dung");
+        }
+    } while (!check)
+
+    do {
+        check = false;
+        followedpeople = prompt("followedpeople: ");
+        if (!isNaN(followedpeople)) {
+            followedpeople = Number.parseFloat(followedpeople);
+            if (Number.isInteger(followedpeople) && followedpeople >= 0) {
+                check = true;
+            }
+        }
+        if (!check) {
+            alert("So nguoi di cung khong hop le")
+        }
+    } while (!check);
+
+    do {
+        check = false;
+        rentDays = prompt("rent Days: ");
+        if (!isNaN(rentDays)) {
+            rentDays = Number.parseFloat(rentDays);
+            if (Number.isInteger(rentDays) && rentDays >= 0) {
+                check = true;
+            }
+        }
+        if (!check) {
+            alert("So ngay thue khong hop le")
+        }
+    } while (!check);
+    let tempaddress = "";
+    address = prompt("Customer address: ");
+    address = address.trim().toLowerCase();
+    for (let i = 0; i < address.length; i++) {
+        if (address.charAt(i) === " " && address.charAt(i + 1) === " ") {
+            console.log("a")
+        }
+        if (i === 0 || address.charAt(i - 1) === " ") {
+            tempaddress += address.charAt(i).toUpperCase();
+            continue;
+        }
+        tempaddress += address.charAt(i);
+    }
+    serviceType = prompt("serviceType: ");
+    roomType = prompt("roomType: ");
+    customerType = prompt("customerType: ");
+
+
+</script>
+</body>
+</html>
