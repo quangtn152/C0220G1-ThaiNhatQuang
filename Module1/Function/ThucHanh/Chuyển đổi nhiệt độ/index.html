@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<h1>Temperature Converter</h1>
+<div>Type a value in the F to C: </div>
+<p>F: </p>
+<input id="doF" type="number"
+       oninput="convertFtoC(this.value)"
+       onchange="convertFtoC(this.value)">
+<p>Ket Qua: </p>
+<p id="doC"></p>
+<script>
+    function convertFtoC(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("doC").innerHTML = (valNum-32) / 1.8;
+    }
+</script>
+</body>
+</html>
