@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Giải phương trình bậc 2.</title>
+</head>
+<body>
+<!--Bài 7: Giải phương trình bậc 2.-->
+<!--ax2+bx +c = 0-->
+<script>
+    let a = parseInt(prompt("nhap a"));
+    let b = parseInt(prompt("nhap b"));
+    let c = parseInt(prompt("nhap c"));
+    let denta = Math.pow(b, 2) - 4 * a * c;
+    console.log(denta);
+    if (denta > 0) {
+        alert("phuong trinh co 2 nghiem: x1 = " + (-b - Math.sqrt(denta)) / (2 * a) + " va x2 = " + (-b + Math.sqrt(denta)) / (2 * a))
+    } else if (denta = 0) {
+        alert("phuong trinh co nghiem kep x1 = x2 =  " + -b / (2 * a))
+    } else {
+        alert("phuong trinh vo nghiem")
+    }
+</script>
+</body>
+</html>
