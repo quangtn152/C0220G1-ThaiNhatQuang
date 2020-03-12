@@ -5,22 +5,103 @@
     <title>puzzle</title>
 </head>
 <body>
-<div> <img src="images/monkey_part1x1.jpg">
-    <img id="img1" src="images/funny-cat1_part1x1.jpg" onclick="switchImages()">
-    <img id="img2" src="images/funny-cat1_part2x1.jpg" onclick="switchImages(this.src)">
-    <img id="img3" src="images/funny-cat1_part3x1.jpg" onclick="switchImages(this.src)">
-    <img id="img4" src="images/funny-cat1_part4x1.jpg" onclick="switchImages(this.src)">
-    <img id="img5"src="images/funny-cat1_part5x1.jpg" onclick="switchImages(this.src)">
+<div>
+    <!--    <img src="images/monkey_part1x1.jpg">-->
+
+    <!--    <img src="images/panda_swap_part1x1.jpg" height="79" width="304"/>-->
+    <!--    <img src="images/funny-cat1_part1x1.jpg" height="160" width="800"/>-->
+    <img id="img1" src="images/funny-cat1_part1x1.jpg" height="160" width="800" onclick="switchImages('image1')">
+    <img id="img2" src="images/funny-cat1_part2x1.jpg" height="160" width="800" onclick="switchImages('image2')">
+    <img id="img3" src="images/funny-cat1_part3x1.jpg" height="160" width="800" onclick="switchImages('image3')">
+    <img id="img4" src="images/funny-cat1_part4x1.jpg" height="160" width="800" onclick="switchImages('image4')">
+    <img id="img5" src="images/funny-cat1_part5x1.jpg" height="160" width="800" onclick="switchImages('image5')">
 
 
 </div>
 <script>
-    function switchImages() {
-        let img1= document.getElementById("img1")
-        if (img1.src){
-            img1.src = "images/monkey_part1x1.jpg"
-            console.log("a")
+    function switchImages(image) {
+        let img1 = document.getElementById("img1");
+        let img2 = document.getElementById("img2");
+        let img3 = document.getElementById("img3");
+        let img5 = document.getElementById("img5");
+        let img4 = document.getElementById("img4");
+
+
+        if (image === "image1") {
+            // if (img1.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/funny-cat1_part1x1.jpg") {
+            //     img1.src = "images/monkey_part1x1.jpg"
+            // } else if (img1.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/monkey_part1x1.jpg") {
+            //     img1.src = "images/panda_swap_part1x1.jpg"
+            // } else if (img1.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/panda_swap_part1x1.jpg") {
+            //     img1.src = "images/funny-cat1_part1x1.jpg"
+            // }
+            if (img1.src.match('cat')) {
+                img1.src = "images/monkey_part1x1.jpg"
+            } else if (img1.src.match('monkey')) {
+                img1.src = "images/panda_swap_part1x1.jpg"
+            } else if (img1.src.match('panda')) {
+                img1.src = "images/funny-cat1_part1x1.jpg"
+            }
         }
+
+        if (image === "image2") {
+            if (img2.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/funny-cat1_part2x1.jpg") {
+                img2.src = "images/monkey_part2x1.jpg"
+            } else if (img2.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/monkey_part2x1.jpg") {
+                img2.src = "images/panda_swap_part2x1.jpg"
+            } else if (img2.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/panda_swap_part2x1.jpg") {
+                img2.src = "images/funny-cat1_part2x1.jpg"
+            }
+        }
+        if (image === "image3") {
+            if (img3.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/funny-cat1_part3x1.jpg") {
+                img3.src = "images/monkey_part3x1.jpg"
+            } else if (img3.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/monkey_part3x1.jpg") {
+                img3.src = "images/panda_swap_part3x1.jpg"
+            } else if (img3.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/panda_swap_part3x1.jpg") {
+                img3.src = "images/funny-cat1_part3x1.jpg"
+            }
+        }
+        if (image === "image4") {
+            if (img4.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/funny-cat1_part4x1.jpg") {
+                img4.src = "images/monkey_part4x1.jpg"
+            } else if (img4.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/monkey_part4x1.jpg") {
+                img4.src = "images/panda_swap_part4x1.jpg"
+            } else if (img4.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/panda_swap_part4x1.jpg") {
+                img4.src = "images/funny-cat1_part4x1.jpg"
+            }
+        }
+        if (image === "image5") {
+            if (img5.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/funny-cat1_part5x1.jpg") {
+                img5.src = "images/monkey_part5x1.jpg"
+            } else if (img5.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/monkey_part5x1.jpg") {
+                img5.src = "images/panda_swap_part5x1.jpg"
+            } else if (img5.src === "http://localhost:63342/CodeGym/Module1/C%E1%BA%A5u%20tr%C3%BAc%20%C4%91i%E1%BB%81u%20ki%E1%BB%87n/BaiTap/puzzle/images/panda_swap_part5x1.jpg") {
+                img5.src = "images/funny-cat1_part5x1.jpg"
+            }
+        }
+
+        if (img1.src.match('cat')
+            && img2.src.match('cat')
+            && img3.src.match('cat')
+            && img4.src.match('cat')
+            && img5.src.match('cat')) {
+            alert("Win")
+        } else if (img1.src.match('monkey')
+            && img2.src.match('monkey')
+            && img3.src.match('monkey')
+            && img4.src.match('monkey')
+            && img5.src.match('monkey')) {
+            alert("Win")
+        } else if (img1.src.match('panda')
+            && img2.src.match('panda')
+            && img3.src.match('panda')
+            && img4.src.match('panda')
+            && img5.src.match('panda')) {
+            alert("Win")
+        }
+
+
     }
 
 </script>
