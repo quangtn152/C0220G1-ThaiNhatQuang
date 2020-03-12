@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Temperature Converter</h1>
-<div>Type a value in the F to C: </div>
+<div>Type a value in the F to C:</div>
 <p>F: </p>
 <input id="doF" type="number"
        oninput="convertFtoC(this.value)"
@@ -16,7 +16,7 @@
 <script>
     function convertFtoC(valNum) {
         valNum = parseFloat(valNum);
-        document.getElementById("doC").innerHTML = (valNum-32) / 1.8;
+        document.getElementById("doC").innerHTML = (valNum - 32) / 1.8;
     }
 </script>
 </body>
