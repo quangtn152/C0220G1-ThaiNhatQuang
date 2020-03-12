@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt5</title>
+</head>
+<body>
+<!--Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ-->
+<script>
+    let diemkiemtra= parseInt(prompt("Nhap điểm bài kiểm tra: "));
+    let diemgiuaky= parseInt(prompt("Nhap dđiểm thi giữa kỳ: "));
+    let diemcuoiky= parseInt(prompt("Nhap điểm thi cuối kỳ: "));
+    let diemtb=(diemkiemtra+diemgiuaky+diemcuoiky)/3
+    if (diemtb>=8){
+        alert("Hoc sinh gioi");
+    } else if(diemtb>=6){
+        alert("Hoc sinh kha");
+    } else {
+        alert("hoc sinh tb")
+    }
+</script>
+</body>
+</html>
