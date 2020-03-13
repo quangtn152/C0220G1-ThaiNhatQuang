@@ -8,7 +8,7 @@
 <h1>Tu Dien</h1>
 <label> Dien tu can dich:</label>
 <input id="word">
-<button type="button" onclick="tratu()"> Tra tu</button>
+<button type="button" onclick="search()"> Tra tu</button>
 <h2> Nghia cua tu:</h2>
 <div id="result"></div>
 <script>
@@ -16,7 +16,7 @@
     let tienganh = ["hello", "bye", "night"]
     let tiengviet = ["xin chao", "tam biet", 'buoi toi']
 
-    function tratu() {
+    function search() {
         for (let i = 0; i < 3; i++) {
             if (tudien.value == tienganh[i]) {
                 document.getElementById("result").innerHTML = tiengviet[i]

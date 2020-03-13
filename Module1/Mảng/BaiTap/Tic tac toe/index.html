@@ -14,29 +14,96 @@ Mỗi lần giá trị được nhập vào thì bàn cờ thay đổi giá tr�
 Xác định người chiến thằng nhập giá trị có 3 ô liên tiếp giống nhau.
 <div id="caro"></div>
 <button onclick="turnA()">Turn A</button>
-<button onclick="turnB()">Turn A</button>
+<button onclick="turnB()">Turn B</button>
 
 <h1>caro</h1>
 <script>
     let data = "";
     let banCaro = [];
     for (let i = 0; i < 10; i++) {
-        banCaro[i] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        banCaro[i] = ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
     }
     for (let i = 0; i < 10; i++) {
         data = data + "<br>";
         for (let j = 0; j < 10; j++) {
-            data = data + banCaro[i][j] +"&nbsp;&nbsp;&nbsp;"
+            data = data + banCaro[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;"
         }
     }
     document.getElementById("caro").innerHTML = data
-    function turnA() {
-         let x= prompt("nhap x:")
-         let y= prompt("nhap y:")
 
+    function tich(x, y) {
+        data = ""
+        // banCaro[x][y] = "x";
+        for (let i = 0; i < 10; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 10; j++) {
+                data += banCaro[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        document.getElementById("caro").innerHTML = data;
     }
 
+    function turnA() {
+        let x = prompt("nhap x:")
+        let y = prompt("nhap y:")
+        // data = ""
+        if (banCaro[x][y] === "*") {
+            banCaro[x][y] = "x";
+            tich(x, y)
+            checkwin();
+            // for (let i = 0; i < 10; i++) {
+            //     data += "<br/>";
+            //     for (let j = 0; j < 10; j++) {
+            //         data += banCaro[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            //     }
+            // }
+            // document.getElementById("caro").innerHTML = data;
+        } else if ((banCaro[x][y] === "x") || (banCaro[x][y] === "o")) {
+            alert("toa do ban nhap bi trung, vui long nhap lai")
+            turnA()
+            // x = prompt("nhap lai x:")
+            // y = prompt("nhap lai y:")
+            // tich(x,y);
+            // banCaro[x][y] = "x";
+            // for (let i = 0; i < 10; i++) {
+            //     data += "<br/>";
+            //     for (let j = 0; j < 10; j++) {
+            //         data += banCaro[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            //     }
+            // }
+            // document.getElementById("caro").innerHTML = data;
+        }
+    }
 
+    function turnB() {
+        let x = prompt("nhap x:")
+        let y = prompt("nhap y:")
+        // data = ""
+        if (banCaro[x][y] === "*") {
+            banCaro[x][y] = "o";
+            tich(x, y)
+            checkwin();
+        } else if ((banCaro[x][y] === "x") || (banCaro[x][y] === "o")) {
+            alert("toa do ban nhap bi trung, vui long nhap lai")
+            turnB()
+        }
+    }
+
+    function checkwin() {
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 10; j++) {
+                if ((banCaro[i][j] === "x") && (banCaro[i][j + 1] === "x") && (banCaro[i][j + 2] === "x")
+                    || (banCaro[i][j] === "x") && (banCaro[i + 1][j + 1] === "x") && (banCaro[i + 2][j + 2] === "x")
+                    || (banCaro[i][j] === "x") && (banCaro[i + 1][j] === "x") && (banCaro[i + 2][j] === "x")) {
+                    alert("A win")
+                } else if (((banCaro[i][j] === "o") && (banCaro[i][j + 1] === "o") && (banCaro[i][j + 2] === "o"))
+                    || (banCaro[i][j] === "x") && (banCaro[i + 1][j + 1] === "x") && (banCaro[i + 2][j + 2] === "x")
+                    || (banCaro[i][j] === "x") && (banCaro[i + 1][j] === "x") && (banCaro[i + 2][j] === "x")) {
+                    alert("A win")
+                }
+            }
+        }
+    }
 
 
 </script>
