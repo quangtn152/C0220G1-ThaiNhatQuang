@@ -11,8 +11,8 @@
     let result = "";
     while (count < 20) {
         let status = true;
-        for (let i = 2; i < Math.sqrt(numb); i++) {
-            if (numb % 2 == 0) {
+        for (let i = 2; i <= Math.sqrt(numb); i++) {
+            if (numb % i === 0) {
                 status= false;
                 break;
             }

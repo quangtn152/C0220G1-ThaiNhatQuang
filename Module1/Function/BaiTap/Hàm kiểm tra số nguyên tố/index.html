@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    // let a = parseInt(prompt("nhap so nguyen"))
+
+    function isPrime(a) {
+        if (a <= 1) {
+            return false
+        }
+        for (let i = 2; i <= Math.sqrt(a); i++) {
+            if (a % i === 0) {
+                return false
+            }
+        }
+        return true
+    }
+
+    // if (!isPrime(a)) {
+    //     alert("a k phai so nguyen to")
+    // } else {
+    //     alert("a la so nguyen to")
+    // }
+    for (let i=0; i<10000;i++){
+        if (isPrime(i)){
+            document.write(i+", ")
+        }
+    }
+</script>
+</body>
+</html>
