@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Hình Tròn</title>
+</head>
+<body>
+<script>
+    class myCircle {
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+
+        Circle() {
+            return this.Circle()
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        getArea() {
+            return this.radius * this.radius * Math.PI
+        }
+    }
+    let newCircle = new myCircle(2,"red")
+    let newR= newCircle.getRadius();
+    let area= newCircle.getArea();
+    alert("hinh tron co ban kinh "+newR+ " co dien tich: "+ area + " va mau: " +newCircle.color)
+</script>
+</body>
+</html>
