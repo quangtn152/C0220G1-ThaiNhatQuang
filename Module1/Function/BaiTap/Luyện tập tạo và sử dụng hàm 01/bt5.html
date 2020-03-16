@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt5</title>
+</head>
+<body>
+<script>
+    let arr = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    let star = prompt("nhap ten ngoi sao can tim");
+    let status = false;
+
+    function find(arr, arr2) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === star) {
+                status = true;
+                return arr2[i]
+                break;
+            } else {
+                status = false;
+            }
+
+        }
+    }
+
+    let chomsao = find(arr, arr2)
+    if (chomsao){
+        alert(chomsao)
+    } else {
+        alert("khong tim thay")
+    }
+
+</script>
+</body>
+</html>
