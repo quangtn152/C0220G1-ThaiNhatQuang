@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt9</title>
+</head>
+<body>
+Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+<script>
+    let num = prompt("nhap ky tu bat ky: ")
+    let arr = ["a", "a", 5, 3, 2, 2, 1, 2]
+
+    function check(num, arr) {
+        let status = false
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == num) {
+                status = true;
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+    let stt = check(num, arr)
+    if (stt) {
+        alert("Ky tu " + num + " xuat hien " + stt)
+    } else {
+        alert(-1)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt</title>
+</head>
+<body>
+Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+<script>
+    let arr = [1, 2, 3, 4, 5];
+
+    function daonguoc(arr) {
+        let first=0;
+        let last= arr.length-1;
+        while (arr[first]<arr[last]){
+            arr[first]=arr[first]+arr[last];//6
+            arr[last]=arr[first]-arr[last];//1
+            arr[first]=arr[first]-arr[last];
+            first++;
+            last--
+        }
+        return arr;
+    }
+    alert( arr)
+    alert(daonguoc(arr))
+</script>
+</body>
+</html>
