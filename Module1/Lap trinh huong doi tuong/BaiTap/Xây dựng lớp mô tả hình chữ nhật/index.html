@@ -17,15 +17,17 @@
         setWidth(width) {
             this.width = width;
         }
-        setHeight(height){
-            this.height=height;
+
+        setHeight(height) {
+            this.height = height;
         }
+
         dientich() {
             return this.width * this.height
         }
 
         chuvi() {
-            return + (this.width + this.height) * 2
+            return +(this.width + this.height) * 2
         }
 
         toCanvan() {
@@ -33,7 +35,7 @@
             ctx.beginPath();
             ctx.rect(20, 20, this.width, this.height);
             ctx.stroke();
-            ctx.fillText("Dien tich: "+ this.dientich() + " va chu vi:" + this.chuvi(), this.width/2,this.height);
+            ctx.fillText("Dien tich: " + this.dientich() + " va chu vi:" + this.chuvi(), this.width / 2, this.height);
         }
     }
 
@@ -42,7 +44,6 @@
     newRec.setWidth(500);
     newRec.setHeight(300);
     newRec.toCanvan();
-
     console.log(newRec.dientich());
     console.log(newRec.chuvi());
 

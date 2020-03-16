@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<div>Nhiet Do Hien Tai:</div>
+<div id =tempC></div>
+<div id =tempF></div>
+<div id =tempK></div>
+<script>
+    class temperatureC {
+        constructor(tempC) {
+            this.tempC = tempC;
+        }
+
+        temCtoF() {
+            return (this.tempC * 1.8) + 32
+        }
+
+        temCtoK() {
+            return this.tempC + 273.15
+        }
+    }
+
+    let temp = new temperatureC(25);
+    document.getElementById("tempC").innerHTML="Nhiet do C: " +temp.tempC
+    document.getElementById("tempF").innerHTML="Nhiet do F: " +temp.temCtoF()
+    document.getElementById("tempK").innerHTML="Nhiet do K: " +temp.temCtoK()
+    console.log(temp.temCtoF());
+    console.log(temp.temCtoK());
+</script>
+</body>
+</html>
