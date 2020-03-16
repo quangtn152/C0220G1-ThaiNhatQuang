@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng</title>
+</head>
+<body>
+<h1>FURAMA RESORT</h1>
+<button id="addName" onclick="addBtn()">Add Name Customer</button>
+<button id="delName" onclick="delBtn()">Delete Customer</button>
+<div id="listCustomer"></div>
+<div id="numCustomer"></div>
+
+
+<script>
+    let arrNameCustomer = [];
+
+    function addBtn() {
+        let numCus = parseInt(prompt("Nhap so luong customer: "))
+        for (let i = 0; i < numCus; i++) {
+            let cusName = prompt('Ten cua customer thu ' + (i + 1) + ":")
+            arrNameCustomer.push(cusName);
+        }
+        arrNameCustomer.sort();
+        result(arrNameCustomer);
+    }
+    function delBtn() {
+
+        let delName = prompt("nhap ten customer muon xoa")
+        for (let i = 0; i < arrNameCustomer.length; i++) {
+            if (arrNameCustomer[i] == delName){
+                arrNameCustomer.splice(i,1)
+            }
+        }
+        result(arrNameCustomer)
+    }
+
+    function result(arr) {
+        document.getElementById("listCustomer").innerHTML = "Danh sach customer: "
+        let result = '';
+        for (let i = 0; i < arr.length; i++) {
+            result = result + (i + 1) + ". " + arr[i] + "<br>"
+        }
+        document.getElementById("numCustomer").innerHTML = result
+    }
+</script>
+</body>
+</html>
