@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu chuyện Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        isEmpty() {
+            return false;
+        }
+
+        decrease() {
+            if (this.weight > 0) {
+                return this.weight--;
+            }
+
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.humanweight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.humanweight;
+        }
+
+        takeApple(appleWeight) {
+            this.weight = appleWeight;
+        }
+
+        increase() {
+            if (this.weight > 0) {
+                return this.humanweight++
+            }
+        }
+
+        // isMale() {
+        //     return true
+        // }
+        //
+        // getGender(gender) {
+        //     if (this.isMale()) {
+        //         this.gender = "Nam"
+        //     } else {
+        //         this.gender = "Nu"
+        //     }
+        // }
+
+        checkAple(Apple) {
+            alert("So luong qua tao con lai la: " + Apple.weight)
+        }
+
+        speak() {
+            // let saying = prompt("ban muon noi gi")
+            // alert(saying)
+            alert("Toi ten la " + this.name + ". Can Nang cua toi la: " + this.humanweight + " toi la: " + this.gender)
+        }
+
+        eat() {
+            this.weight.decrease();
+            this.humanweight++
+            alert((apple.weight))
+        }
+
+    }
+
+    let apple = new Apple(10);
+    let Adam = new Human("Adam", "nam", 80);
+    let Eva = new Human("Eva", "Nu", 50)
+    Adam.takeApple(apple);
+    Eva.takeApple(apple);
+    // Adam.eat();
+    // Eva.eat();
+    // Adam.speak();
+    // Eva.speak();
+    // Eva.eat();
+    // Eva.eat();
+    // Adam.checkAple(apple)
+    // Eva.speak();
+    while (apple.weight > 0) {
+        Adam.eat();
+        Eva.eat();
+        Adam.speak();
+        Eva.speak();
+    }
+    Adam.checkAple(apple)
+</script>
+</body>
+</html>
