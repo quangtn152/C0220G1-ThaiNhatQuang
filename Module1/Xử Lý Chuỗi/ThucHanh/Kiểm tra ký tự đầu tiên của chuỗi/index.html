@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự đầu tiên của chuỗi</title>
+</head>
+<body>
+<script>
+    function checkUpcaseLetter(str) {
+        let regexp = /^[A-Z]/;
+        if (regexp.test(str)) {
+            console.log('String\'s first character is uppercase')
+        } else {
+            console.log('"String\'s first character is not uppercase"')
+        }
+    }
+
+    checkUpcaseLetter("Aaaaaa");
+    checkUpcaseLetter("aaaaa");
+
+</script>
+</body>
+</html>
