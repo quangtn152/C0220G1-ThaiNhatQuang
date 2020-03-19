@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate email</title>
+</head>
+<body>
+<script>
+    let email=prompt("Nhap email: ")
+    let regExp=/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/
+    function valEmail(email) {
+        if(regExp.test(email)){
+            return true
+        }
+    }
+    if(valEmail(email)){
+        alert("Email Hop Le")
+    } else {
+        alert("Email khong hop le")
+    }
+</script>
+</body>
+</html>
