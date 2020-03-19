@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra Mã quốc gia nước Mỹ</title>
+</head>
+<body>
+<script>
+    function checkUsZipcode(zipCode) {
+        let regexp = /^[0-9]{5}(?:-[0-9]{4})?$/
+        //^ Bat dau chuoi
+        // [0-9]{5}: chuoi gom 5 ky tu trong khoang 0-9
+        // (?:-..) : nhom cac chuoi bat dau = -
+        //[0-9]{4}: chuoi gom 4 ky tu trong khoang 0-9
+        //?:
+        //$: ket thuc
+        return regexp.test(zipCode);
+    }
+
+    console.log(checkUsZipcode("03201-2150-2323"));
+    console.log(checkUsZipcode("03201-2150"));
+
+
+</script>
+</body>
+</html>
