@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate account</title>
+</head>
+<body>
+<script>
+    let accName= prompt("Nhap Ten tk: ");
+    let regExp= /^[_a-z0-9]{6,}$/
+        function valAccNam(accName) {
+            if(regExp.test(accName)){
+                return true
+            }
+        }
+    if(valAccNam(accName)){
+        alert("Ten tk Hop Le")
+    } else {
+        alert("Ten tk khong hop le")
+    }
+</script>
+</body>
+</html>
