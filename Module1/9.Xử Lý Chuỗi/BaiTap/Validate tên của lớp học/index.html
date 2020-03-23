@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate tên của lớp học</title>
+</head>
+<body>
+<!--Bắt đầu bằng một ký tự chữ hoa C hoặc A hoặc P-->
+
+<!--Không chứa các ký tự đặc biệt-->
+
+<!--Theo sau ký tự bắt đầu là 4 ký tự số-->
+
+<!--Kết thúc phải là 1 trong những ký tự chữ hoa sau: G, H, I, K, L, M-->
+<script>
+    let className=prompt("Nhap ten Lop: ")
+    let regExp=/^[CAP]+[0-9]{4}[GHIKLM]$/
+    function valClassName(className) {
+        if(regExp.test(className)){
+            return true
+        }
+    }
+    if(valClassName(className)){
+        alert("className Hop Le")
+    } else {
+        alert("className khong hop le")
+    }
+</script>
+</body>
+</html>
