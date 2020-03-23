@@ -5,19 +5,53 @@
     <title>công tắc và bóng đèn</title>
 </head>
 <body>
+
+<img id="lamp" src="img/Den_Tat.gif" height="180" width="100"/>
+<div id="result">Bong Den Tat</div>
+<button id="switchButton" onclick="turnButton()">Switch</button>
 <script>
-    class lamp {
+    class switchButton {
         constructor(status) {
             this.status = status;
         }
 
-        turnOn() {
-            this.status = true
+        getStatus() {
+            return this.status
+        };
+
+        setStatus(newStatus) {
+            this.status = newStatus;
         }
 
-        turnOff() {
-            this.status = false
+        turnOn_Off() {
+            this.status = !this.status
         }
+    }
+
+    class lamp {
+        constructor(switchButton) {
+            this.switchButton = switchButton;
+        }
+
+        clickButton() {
+            if (this.switchButton.getStatus() === true) {
+                document.getElementById("lamp").src = "img/Den_Sang.gif"
+                document.getElementById("result").innerHTML = "Bong Den Sang"
+
+            } else {
+
+                document.getElementById("lamp").src = "img/Den_Tat.gif"
+                document.getElementById("result").innerHTML = "Bong Den Tat"
+            }
+        }
+    }
+
+    let Button = new switchButton(false)
+    let bongden = new lamp(Button)
+
+    function turnButton() {
+        Button.turnOn_Off();
+        bongden.clickButton()
     }
 </script>
 </body>
