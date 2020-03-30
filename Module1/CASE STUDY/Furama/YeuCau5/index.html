@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YeuCau5</title>
+</head>
+<body>
+<script>
+
+    function displayMainMenu() {
+        let selectNumb = parseInt(prompt("Lua chon:" + "\n" +
+            "1.Add New Customer" + "\n" +
+            "2.Display Information Customer." + "\n" +
+            "3.Edit Information Customer." + "\n" +
+            "4.Delete Customer." + "\n" +
+            "5.Exit."
+        ))
+        switch (selectNumb) {
+            case 1: {
+                addNewCus();
+                break;
+            }
+            case 2: {
+                displayInfoCus();
+                break;
+            }
+            case 3: {
+                editCustomer();
+                break;
+            }
+            case 4: {
+                delCustom()
+                break;
+            }
+            case 5: {
+                // alert("5.Exit.")
+                break;
+            }
+            default: {
+                alert('Failed')
+            }
+
+        }
+    }
+
+    let arrListCustomers = [];
+
+    function addNewCus() {
+        let cusInfo = [];
+        let name = prompt("Nhap Ten: ");
+        cusInfo.push(name);
+        let idCard = prompt("Nhap CMND: ");
+        cusInfo.push(idCard);
+        let birthday = prompt("birthday: ");
+        cusInfo.push(birthday);
+        let email = prompt("email: ");
+        cusInfo.push(email);
+        let address = prompt("address: ");
+        cusInfo.push(address);
+        let serviceType = prompt("serviceType: ");
+        cusInfo.push(serviceType);
+        let rentDays = prompt("rentDays: ");
+        cusInfo.push(rentDays);
+        let discount = prompt("discount: ");
+        cusInfo.push(discount);
+        let customerType = prompt("customerType: ");
+        cusInfo.push(customerType);
+        let roomType = prompt("roomType: ");
+        cusInfo.push(roomType);
+        let followedPeople = prompt("Nguoi di theo:: ");
+        cusInfo.push(followedPeople);
+
+        alert("Ban Da Nhap Xong")
+        arrListCustomers.push(cusInfo)
+        console.log(cusInfo);
+        console.log(arrListCustomers);
+        displayMainMenu()
+
+    }
+
+    function displayInfoCus() {
+        let temp = "";
+        for (let i = 0; i < arrListCustomers.length; i++) {
+            temp += i + ". Name:" + arrListCustomers[i][0] + "\n"
+        }
+        let selectDisplay = parseInt(prompt(temp))
+        alert("Name: " + arrListCustomers[selectDisplay][0] + "\n" +
+            "CMND: " + arrListCustomers[selectDisplay][1] + "\n" +
+            "birthday: " + arrListCustomers[selectDisplay][2] + "\n" +
+            "email: " + arrListCustomers[selectDisplay][3] + "\n" +
+            "address: " + arrListCustomers[selectDisplay][4] + "\n" +
+            "serviceType: " + arrListCustomers[selectDisplay][5] + "\n" +
+            "rentDays: " + arrListCustomers[selectDisplay][6] + "\n" +
+            "discount: " + arrListCustomers[selectDisplay][7] + "\n" +
+            "customerType: " + arrListCustomers[selectDisplay][8] + "\n" +
+            "roomType: " + arrListCustomers[selectDisplay][9] + "\n" +
+            "Followed people: " + arrListCustomers[selectDisplay][10] + "\n");
+        displayMainMenu();
+
+    }
+
+    function editCustomer() {
+        let temp = "";
+        for (let i = 0; i < arrListCustomers.length; i++) {
+            temp += i + ". Name:" + arrListCustomers[i][0] + "\n"
+        }
+        let selectDisplay = parseInt(prompt(temp))
+        let selectEdit = parseInt(prompt("1.Name: " + arrListCustomers[selectDisplay][0] + "\n" +
+            "2.CMND: " + arrListCustomers[selectDisplay][1] + "\n" +
+            "3.birthday: " + arrListCustomers[selectDisplay][2] + "\n" +
+            "4.email: " + arrListCustomers[selectDisplay][3] + "\n" +
+            "5.address: " + arrListCustomers[selectDisplay][4] + "\n" +
+            "6.serviceType: " + arrListCustomers[selectDisplay][5] + "\n" +
+            "7.rentDays: " + arrListCustomers[selectDisplay][6] + "\n" +
+            "8.discount: " + arrListCustomers[selectDisplay][7] + "\n" +
+            "9.customerType: " + arrListCustomers[selectDisplay][8] + "\n" +
+            "10.roomType: " + arrListCustomers[selectDisplay][9] + "\n" +
+            "11.Followed people: " + arrListCustomers[selectDisplay][10] + "\n"));
+        switch (selectEdit) {
+            case 1 : {
+                arrListCustomers[selectDisplay][0] = prompt("1.Name: ");
+                break;
+            }
+            case 2 : {
+                arrListCustomers[selectDisplay][0] = prompt("2.CMND: ");
+                break;
+            }
+            case 3 : {
+                arrListCustomers[selectDisplay][0] = prompt("3.birthday: ");
+                break;
+            }
+            case 4 : {
+                arrListCustomers[selectDisplay][0] = prompt("4.email: ");
+                break;
+            }
+            case 5 : {
+                arrListCustomers[selectDisplay][0] = prompt("5.address: ");
+                break;
+            }
+            case 6 : {
+                arrListCustomers[selectDisplay][0] = prompt("6.serviceType: ");
+                break;
+            }
+            case 7 : {
+                arrListCustomers[selectDisplay][0] = prompt("7.rentDays: ");
+                break;
+            }
+            case 8 : {
+                arrListCustomers[selectDisplay][0] = prompt("8.discount: ");
+                break;
+            }
+            case 9 : {
+                arrListCustomers[selectDisplay][0] = prompt("9.customerType: ");
+                break;
+            }
+            case 10 : {
+                arrListCustomers[selectDisplay][0] = prompt("10.roomType: ");
+                break;
+            }
+            case 11 : {
+                arrListCustomers[selectDisplay][0] = prompt("11.Followed people: ");
+                break;
+            }
+            default: {
+                alert("Failed")
+            }
+        }
+        displayMainMenu();
+    }
+    function delCustom() {
+        let temp = "";
+        for (let i = 0; i < arrListCustomers.length; i++) {
+            temp += i + ". Name:" + arrListCustomers[i][0] + "\n"
+        }
+        let selectDisplay = parseInt(prompt("Nhap Ten Customer muon xoa: "+temp))
+
+        for (let i = 0; i < arrListCustomers.length; i++) {
+            if (i === selectDisplay){
+                arrListCustomers.splice(i,1)
+            }
+        }
+        displayMainMenu();
+    }
+
+    displayMainMenu()
+</script>
+</body>
+</html>
