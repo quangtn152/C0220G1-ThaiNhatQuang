@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [1,"a",4, 2,  3, 4];
+    let arr2 = [4, 3,  2, 4,"a",1,1];
+
+    function check(arr1, arr2) {
+        let status = false;
+        console.log(arr2.length)
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== arr2[arr2.length - i - 1]) {
+                console.log("arr1[i]",arr1[i]);
+                console.log("arr2[arr2.length - i - 1]",arr2[arr2.length - i - 1]);
+                status = false;
+                break;
+            } else {
+                status = true
+            }
+        }
+        return status
+    }
+
+    if (check(arr1, arr2)) {
+        console.log(check(arr1, arr2))
+        alert("Mang Doi XUng")
+    } else {
+        alert("khong doi xung")
+    }
+
+</script>
+
+
+</body>
+</html>
