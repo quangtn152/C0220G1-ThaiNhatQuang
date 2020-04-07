@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau4</title>
+</head>
+<body>
+<!--Tạo một lớp có tên là HocSinh bao gồm các thuộc tính như sau: Số thứ tự, Họ và tên, Ngày sinh, Điểm trung bình. -->
+<!--Yêu cầu:-->
+<!--Viết hàm hiển thị thông tin học sinh với đầy đủ các thuộc tính-->
+<!--Viết hàm kiểm tra học lực của học sinh-->
+<!--&gt;8 là học sinh GIỎI-->
+<!--&gt;= 6.5 là học sinh KHÁ-->
+<!--&gt;=5 là học sinh TRUNG BÌNH-->
+<!--&gt;= 3.5 là học sinh YẾU-->
+<!--Còn lại là học sinh KÉM-->
+<!--Áp dụng được phương thức.-->
+<!--*Dữ liệu học sinh thì học viên tự cho trước.-->
+<script>
+    class HocSinh {
+        constructor(stt, HoTen, NgaySinh, dtb) {
+            this.stt = stt;
+            this.HoTen = HoTen;
+            this.NgaySinh = NgaySinh;
+            this.dtb = dtb
+        }
+
+        getStt() {
+            return this.stt
+        }
+
+        setStt(stt) {
+            this.stt = stt;
+        }
+
+        getHoTen() {
+            return this.HoTen
+        }
+
+        setHoTen(HoTen) {
+            this.HoTen = HoTen;
+        }
+
+        getNgaySinh() {
+            return this.NgaySinh
+        }
+
+        setNgaySinh(NgaySinh) {
+            this.NgaySinh = NgaySinh;
+        }
+
+        getDtb() {
+            return this.dtb
+        }
+
+        setDtb(dtb) {
+            this.dtb = dtb;
+        }
+
+        hienThiHocsinh() {
+            alert("Stt: " + this.getStt() + "\n" +
+                "Ho Va Ten: " + this.getHoTen() + "\n" +
+                "Ngay Sinh: " + this.getNgaySinh() + "\n" +
+                "Diem Trung Binh: " + this.getDtb() + "\n")
+        }
+
+        kiemtrahocluc() {
+            if (this.getDtb() > 8) {
+                alert("Hoc Sinh " + this.getHoTen() + " La Hoc Sinh Gioi")
+            } else if (this.getDtb() >= 6.5) {
+                alert("Hoc Sinh " + this.getHoTen() + " La Hoc Sinh Kha")
+            } else if (this.getDtb() >= 5) {
+                alert("Hoc Sinh " + this.getHoTen() + " La Hoc Sinh Trung Binh")
+            } else if (this.getDtb() >= 3.5) {
+                alert("Hoc Sinh " + this.getHoTen() + " La Hoc Sinh Yeu")
+            } else {
+                alert("Hoc Sinh " + this.getHoTen() + " La Hoc Sinh Kem")
+            }
+        }
+    }
+
+    let hocsinh1 = new HocSinh(1, "Thai Nhat Quang", "15/01/1991", 8);
+    hocsinh1.hienThiHocsinh();
+    hocsinh1.kiemtrahocluc();
+    let hocsinh2 = new HocSinh(2, "Nguyen Ngoc Son", "15/01/1992", 6.8);
+    hocsinh2.hienThiHocsinh();
+    hocsinh2.kiemtrahocluc();
+</script>
+</body>
+</html>

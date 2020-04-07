@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau 1</title>
+</head>
+<body>
+<!--Tạo một mảng rỗng, nhận 5 giá trị thuộc kiểu số nguyên được nhập bàn phím.-->
+<!--Yêu cầu hiển thị mảng đã được sắp xếp theo thứ tự tăng dần ra màn hình.-->
+<!--Thang điểm.-->
+<script>
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        let num = parseInt(prompt("nhap so:"));
+        arr.push(num)
+    }
+    alert("mang khoi tao: "+ arr)
+    let temp;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j + 1]
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    // arr.sort();
+    alert("mang sap xep:"+ arr)
+</script>
+</body>
+</html>

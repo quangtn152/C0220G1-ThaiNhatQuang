@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau2</title>
+</head>
+<body>
+<!--Viết hàm isMainNumber() để kiểm tra một số nguyên có phải là số chính phương hay không? -->
+<!--Trả về True nếu là số chính phương-->
+<!--Trả về False nếu không phải là số chính phương-->
+<!-- ( Số chính phương là số mà căn bậc 2 của số đó là số nguyên ).-->
+<script>
+    let num = parseInt(prompt("nhap so:"))
+
+    function isMainNumber(numb) {
+        let i = 0;
+        let status = false;
+        while (i * i <= numb) {
+            if (i * i === numb) {
+                status = true;
+            } else {
+                status = false
+            }
+            i++;
+        }
+        return status;
+    }
+
+    if (isMainNumber(num)) {
+        alert(num + " la so chinh phuong")
+    } else {
+        alert(num + " khong phai la so chinh phuong")
+    }
+</script>
+</body>
+</html>
