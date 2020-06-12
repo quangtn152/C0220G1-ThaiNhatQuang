@@ -1,0 +1,128 @@
+.container {
+    width: 100%;
+    background-image: url("wallhaven-4lg9l2.jpg");
+    /*background-color: #74b9ff;*/
+}
+
+.header {
+    width: 100%;
+}
+
+.head {
+    float: left;
+    width: 30%;
+color: #00cec9;
+    margin: 5px;
+    /*margin-right: ;*/
+    height: 80px;
+    /*background-color: aquamarine;*/
+}
+
+.head-link {
+    float: right;
+    margin: 5px;
+    /*background-color: #74b9ff;*/
+    width: 60%;
+    height: 80px;
+    color: #f2f2f2;
+}
+.para{
+    clear: both;
+}
+.he {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.typeMenu{
+    border: #00cec9 solid  ;
+    padding: 5px;
+    /*background: aquamarine;*/
+}
+.menuDown{
+    display: flex;
+    flex-direction:column;
+
+}
+.typeMenu2{
+    border: lightslategray solid  ;
+    padding: 5px;
+    /*background: aquamarine;*/
+    margin: 10px;
+}
+.home{
+    border: #00cec9 solid  ;
+    padding: 10px;
+    background:lightslategray;
+    color: white;
+    border: gray solid
+}
+a:link, a:visited {
+    /*background-color: gray;*/
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: black;
+}
+input{
+    margin: 5px;
+}
+.body {
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    margin: 5px;
+}
+
+.left {
+    /*background-color: #74b9ff;*/
+    height: 100%;
+    width: 20%;
+    margin: 5px;
+    text-align: center;
+
+}
+
+.right {
+    /*background-color: #a29bfe;*/
+    height: 100%;
+    width: 20%;
+    margin: 5px;
+    text-align: center;
+
+}
+
+.content {
+    /*background-color: #00cec9;*/
+    height: 100%;
+    width: 80%;
+    margin: 5px;
+    text-align: center;
+    color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer{
+    clear: both;
+    /*background-color: #00cec9;*/
+    height: 100%;
+    margin: 10px;
+    text-align: center;
+    color: aquamarine;
+}
