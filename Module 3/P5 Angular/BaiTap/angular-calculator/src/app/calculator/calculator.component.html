@@ -1,0 +1,35 @@
+
+<div class="container">
+  <p>calculator works!</p>
+  <div class="form-group">
+    <label for="number1">First Number:</label>
+    <input type="text" class="form-control" id="number1"
+           [value]="firstNumber"
+           (change)="onFirstChange($event.target.value)">
+  </div>
+  <div>
+    <select class="form-group"
+            [value]="operator"
+            (change)="onSelectChange($event.target.value)">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="number2">Second Number:</label>
+    <input type="text" class="form-control" id="number2"
+           [value]="secondNumber"
+           (change)="onSecondChange($event.target.value)"></div>
+  <button type="button" class="btn btn-primary" (click)="calculate()">Calculate</button>
+
+  <div class="form-group">
+    <label for="result"> Result:</label>
+    <input type="text" class="form-control" id="result" value="{{output}}" >
+  </div>
+
+</div>
+
+

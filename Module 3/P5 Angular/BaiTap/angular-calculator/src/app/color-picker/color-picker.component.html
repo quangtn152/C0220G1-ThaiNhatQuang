@@ -1,0 +1,11 @@
+<p>color-picker works!</p>
+<div>
+  <div>
+    <label>Chọn màu:</label>
+    <input [value]="background" type="color" (change)="onChange($event.target.value)">
+  </div>
+  <label>output</label>
+  <div style="height: 100px; width: 100px"  [style.background]="background">
+
+  </div>
+</div>
